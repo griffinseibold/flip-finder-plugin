@@ -36,13 +36,13 @@ import okhttp3.Response;
 
 @Slf4j
 @PluginDescriptor(
-	name = "Flip Finder",
+	name = "Flip Finder Agent",
 	description = "Sends your membership, coins and Grand Exchange buy limits to your Flip Finder server",
 	tags = {"grand exchange", "flipping", "merching", "ge"}
 )
 public class FlipFinderPlugin extends Plugin
 {
-	static final String CONFIG_GROUP = "flipfinder";
+	static final String CONFIG_GROUP = "flipfinderagent";
 	private static final String BUY_LIMITS_KEY = "buyLimits";
 	private static final String BANK_COINS_KEY = "bankCoins";
 	private static final String BANK_COINS_SEEN_AT_KEY = "bankCoinsSeenAt";

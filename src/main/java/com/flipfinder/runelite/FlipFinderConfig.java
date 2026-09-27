@@ -11,9 +11,9 @@ public interface FlipFinderConfig extends Config
 		keyName = "sendAccountData",
 		name = "Send account data",
 		description = "Send your membership, coins, Grand Exchange offers and buy limit use to your Flip Finder server",
-		warning = "Sends your RuneScape display name and account hash, membership and ironman status, "
-			+ "inventory and last-seen bank coins, Grand Exchange offers, and tracked buy-limit usage to the "
-			+ "configured 3rd-party Flip Finder server. The server also receives your IP address.",
+		warning = "This feature submits your IP address, RuneScape display name and account hash, membership "
+			+ "and ironman status, inventory and last-seen bank coins, Grand Exchange offers, and tracked "
+			+ "buy-limit usage to a 3rd-party server not controlled or verified by RuneLite developers.",
 		position = 1
 	)
 	default boolean sendAccountData()

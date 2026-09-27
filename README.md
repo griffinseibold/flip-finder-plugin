@@ -1,9 +1,9 @@
-# Flip Finder RuneLite plugin
+# Flip Finder Agent
 
-Sends your Old School RuneScape account's details to your own
-[Flip Finder](https://github.com/griffinseibold/Flip-Finder) server, so it can
-suggest Grand Exchange flips that fit your account instead of asking for a
-budget and filters:
+A RuneLite plugin that sends your Old School RuneScape account's details to
+your own [Flip Finder](https://github.com/griffinseibold/Flip-Finder) server,
+so it can suggest Grand Exchange flips that fit your account instead of asking
+for a budget and filters:
 
 - whether the account is a member, and how many membership days are left
 - whether it is an ironman, which cannot use the Grand Exchange
@@ -20,14 +20,11 @@ The server is the homelab version of Flip Finder; see its
 ## Installing
 
 In RuneLite, open **Configuration**, then **Plugin Hub**, search for
-**Flip Finder** and select **Install**.
-
-> The plugin has not been submitted to the Plugin Hub yet. Until it is, run
-> it from source as described under [Development](#development).
+**Flip Finder Agent** and select **Install**.
 
 ## Setting it up
 
-In RuneLite's configuration, open **Flip Finder**:
+In RuneLite's configuration, open **Flip Finder Agent**:
 
 1. Check **Server URL**. The default, `http://flipfinder.localhost:8080`, is
    Flip Finder on the homelab.
