@@ -146,8 +146,12 @@ public class FlipFinderPlugin extends Plugin
 		}
 		long accountHash = client.getAccountHash();
 		HttpUrl url = HttpUrl.parse(config.serverUrl().trim());
-		if (accountHash == -1 || url == null)
+		if (accountHash == -1 || !isAllowedServerUrl(url))
 		{
+			if (url != null)
+			{
+				log.debug("Refusing to send account data over insecure HTTP to non-loopback host {}", url.host());
+			}
 			return;
 		}
 
@@ -198,6 +202,26 @@ public class FlipFinderPlugin extends Plugin
 				}
 			}
 		});
+	}
+
+	/** Allows HTTPS everywhere and HTTP only for hosts reserved for the local machine. */
+	static boolean isAllowedServerUrl(HttpUrl url)
+	{
+		if (url == null || "https".equals(url.scheme()))
+		{
+			return url != null;
+		}
+
+		if (!"http".equals(url.scheme()))
+		{
+			return false;
+		}
+
+		String host = url.host();
+		return "localhost".equals(host)
+			|| host.endsWith(".localhost")
+			|| "::1".equals(host)
+			|| "127.0.0.1".equals(host);
 	}
 
 	/** Everything sent to the server except the capture time. */

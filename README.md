@@ -52,8 +52,9 @@ minutes otherwise.
 ## Privacy
 
 The plugin sends your account's RuneLite hash and display name with the
-details above, over HTTP, to the server you configure, and to nowhere else.
-Point it only at a server you run.
+details above to the server you configure, and to nowhere else. It permits
+plain HTTP only for loopback addresses such as `flipfinder.localhost`; remote
+servers must use HTTPS. Point it only at a server you run.
 
 ## Development
 
